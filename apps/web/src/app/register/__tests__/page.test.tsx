@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import type { ReactNode } from "react";
 import { describe, expect, it, vi } from "vitest";
-import { RegisterForm } from "../register-form";
+import { RegisterPage } from "../page";
 
 vi.mock("next/navigation", () => ({
   useRouter: () => ({ push: vi.fn() }),
@@ -14,10 +14,10 @@ function renderWithProviders(ui: ReactNode) {
   return render(<QueryClientProvider client={queryClient}>{ui}</QueryClientProvider>);
 }
 
-describe("RegisterForm", () => {
+describe("RegisterPage", () => {
   it("shows validation errors instead of submitting when fields are invalid", async () => {
     const user = userEvent.setup();
-    renderWithProviders(<RegisterForm />);
+    renderWithProviders(<RegisterPage />);
 
     await user.type(screen.getByLabelText(/email/i), "not-an-email");
     await user.type(screen.getByLabelText(/password/i), "short");
