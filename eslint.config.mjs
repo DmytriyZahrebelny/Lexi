@@ -29,10 +29,7 @@ export default config(
   {
     plugins: { unicorn },
     rules: {
-      "unicorn/filename-case": [
-        "error",
-        { cases: { kebabCase: true, pascalCase: true }, ignore: ["^__tests__$"] },
-      ],
+      "unicorn/filename-case": ["error", { case: "kebabCase", ignore: ["^__tests__$"] }],
       "no-restricted-syntax": ["error", NO_DEFAULT_IMPORT, NO_DEFAULT_EXPORT],
     },
   },
