@@ -1,6 +1,6 @@
 import { Effect } from "effect";
 import { describe, expect, it } from "vitest";
-import { runEffectPromise } from "../runEffect";
+import { runEffectPromise } from "../run-effect";
 
 describe("runEffectPromise", () => {
   it("resolves with the success value", async () => {
