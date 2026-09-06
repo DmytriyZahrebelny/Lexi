@@ -4,11 +4,11 @@ import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { deleteCookie, setCookie } from "hono/cookie";
 
-import { db } from "../db/client.js";
-import { users } from "../db/schema.js";
-import { hashPassword, verifyPassword } from "../lib/password.js";
-import { createSessionToken, SESSION_COOKIE_NAME, sessionCookieOptions } from "../lib/session.js";
-import { requireAuth, type AuthVariables } from "../middleware/auth.js";
+import { db } from "../db/client";
+import { users } from "../db/schema";
+import { hashPassword, verifyPassword } from "../lib/password";
+import { createSessionToken, SESSION_COOKIE_NAME, sessionCookieOptions } from "../lib/session";
+import { requireAuth, type AuthVariables } from "../middleware/auth";
 
 export const authRoutes = new Hono<{ Variables: AuthVariables }>();
 

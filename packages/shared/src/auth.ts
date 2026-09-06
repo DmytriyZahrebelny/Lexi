@@ -1,8 +1,11 @@
 import { z } from "zod";
 
 export const registerSchema = z.object({
-  email: z.string().email(),
-  password: z.string().min(8).max(200),
+  email: z.string().email("Enter a valid email address"),
+  password: z
+    .string()
+    .min(8, "Password must be at least 8 characters")
+    .max(200, "Password must be at most 200 characters"),
 });
 export type RegisterInput = z.infer<typeof registerSchema>;
 

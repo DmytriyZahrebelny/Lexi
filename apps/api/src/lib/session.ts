@@ -1,6 +1,6 @@
 import { sign, verify } from "hono/jwt";
 
-import { env } from "../env.js";
+import { env } from "../env";
 
 const JWT_ALG = "HS256";
 

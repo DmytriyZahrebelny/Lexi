@@ -1,7 +1,7 @@
 import { getCookie } from "hono/cookie";
 import { createMiddleware } from "hono/factory";
 
-import { SESSION_COOKIE_NAME, verifySessionToken } from "../lib/session.js";
+import { SESSION_COOKIE_NAME, verifySessionToken } from "../lib/session";
 
 export type AuthVariables = {
   userId: string;
