@@ -1,5 +1,6 @@
 import { Effect } from "effect";
 import { describe, expect, it } from "vitest";
+
 import { runEffectPromise } from "../run-effect";
 
 describe("runEffectPromise", () => {

@@ -1,10 +1,11 @@
 "use client";
 
-import { registerSchema, type RegisterInput } from "@lexi/shared";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Alert, Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import { registerSchema, type RegisterInput } from "@lexi/shared";
+
 import { getErrorMessage } from "../../lib/errors";
 import { useRegister } from "../../lib/query/auth";
 

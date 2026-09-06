@@ -2,6 +2,7 @@
 
 import { Box, Button, CircularProgress, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
+
 import { useLogout, useMe } from "../lib/query/auth";
 
 export default function DashboardPage() {

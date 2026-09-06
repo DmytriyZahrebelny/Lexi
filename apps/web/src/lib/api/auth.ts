@@ -1,5 +1,6 @@
 import { userSchema, type LoginInput, type RegisterInput, type User } from "@lexi/shared";
 import { Effect } from "effect";
+
 import { apiRequest, decode, type ApiError } from "./http";
 
 export function registerUser(input: RegisterInput): Effect.Effect<User, ApiError> {

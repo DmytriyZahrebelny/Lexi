@@ -1,9 +1,10 @@
 "use client";
 
+import { useState, type ReactNode } from "react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useState, type ReactNode } from "react";
+
 import { theme } from "../lib/theme";
 
 export function AppProviders({ children }: { children: ReactNode }) {
